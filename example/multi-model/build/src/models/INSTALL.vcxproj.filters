@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\budcr\source\repos\RyzenAI-SW\example\multi-model\build\CMakeFiles\fadf16d94ee9fa81f354280a33a17173\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2C70815A-D0D4-3001-BC74-7383399E0F36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

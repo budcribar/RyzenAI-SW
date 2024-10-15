@@ -41,7 +41,7 @@ link_directories("${CMAKE_INSTALL_PREFIX}/lib")
 
 
 find_package(OpenCV COMPONENTS core highgui imgproc REQUIRED)
-#find_package(Eigen3) # bug in opencv.cmake.
+find_package(Eigen3) # bug in opencv.cmake.
 
 
 add_executable(resnet_cifar resnet_cifar.cpp util/getopt.c)
