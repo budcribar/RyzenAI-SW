@@ -3,3 +3,5 @@
 __pycache__
 *node_modules*
 *.yml
+/tutorial/yolov8/yolov8_cpp/implement/build/.vs/yolov8
+/.vs/RyzenAI-SW/v17
