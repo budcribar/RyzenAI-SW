@@ -162,7 +162,7 @@ bool isValidEP(const std::string& option) {
 }
 
 int main(int argc, char* argv[]) {
-
+    _putenv_s("CONDA_PREFIX", "C:/Users/budcr/anaconda3/envs/ryzen-ai-1.2.0");
     const char* env_val = getenv("CONDA_PREFIX");
     const char* env_name = "PYTHONHOME";
     _putenv_s(env_name, env_val);
@@ -273,15 +273,23 @@ int main(int argc, char* argv[]) {
 
             // pass data through model
         //cout << "Running model...";
+      
         try {
-            auto output_tensors = session.Run(Ort::RunOptions(), input_names.data(), input_tensors.data(), input_count, output_names.data(), output_count);
+            std::vector<Ort::Value> output_tensors;
+            for (int i = 0; i < 1000; i++)
+            output_tensors = session.Run(Ort::RunOptions(), input_names.data(), input_tensors.data(), input_count, output_names.data(), output_count);
             //cout << "done" << endl;
 
             // double-check the dimensions of the output tensors
             // NOTE: the number of output tensors is equal to the number of output nodes
             // specifed in the Run() call
-            assert(output_tensors.size() == session.GetOutputNames().size() &&
+
+            // fix bug
+            assert(output_tensors.size() == output_names.size() &&
                 output_tensors[0].IsTensor());
+
+           /* assert(output_tensors.size() == session.GetOutputNames().size() &&
+                output_tensors[0].IsTensor());*/
             auto output_shape =
                 output_tensors[0].GetTensorTypeAndShapeInfo().GetShape();
             //cout << "output_tensor_shape: " << print_shape(output_shape) << endl;

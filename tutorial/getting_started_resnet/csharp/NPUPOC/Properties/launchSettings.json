@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NPUPOC": {
+      "commandName": "Project",
+      "commandLineArgs": "models\\resnet.qdq.U8S8.onnx npu vaip_config.json"
+    }
+  }
+}
