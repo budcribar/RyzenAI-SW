@@ -148,7 +148,12 @@ namespace ResNetCIFAR
                         NamedOnnxValue.CreateFromTensor(inputNames[0], tensor)
                     };
 
-                    var outputs = session.Run(inputs);
+                    IDisposableReadOnlyCollection<DisposableNamedOnnxValue> outputs = default!;
+
+                    for (int j = 0; j < 1000; j++)
+                    {
+                        outputs = session.Run(inputs);
+                    }
 
                     // Assume single output
                     var outputTensor = outputs.First().AsEnumerable<float>().ToArray();
