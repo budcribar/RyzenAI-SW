@@ -153,7 +153,7 @@ namespace ResNetCIFAR
 
                     IDisposableReadOnlyCollection<DisposableNamedOnnxValue> outputs = default!;
 
-                    for (int j = 0; j < 1000; j++)
+                    //for (int j = 0; j < 1000; j++)
                     {
                         outputs = session.Run(inputs);
                     }
