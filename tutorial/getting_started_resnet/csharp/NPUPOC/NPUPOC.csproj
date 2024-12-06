@@ -10,7 +10,11 @@
   <ItemGroup>
     <PackageReference Include="Emgu.CV" Version="4.9.0.5494" />
     <PackageReference Include="Emgu.CV.runtime.windows" Version="4.9.0.5494" />
-    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.19.2" />
+    <!--<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.19.2" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\budcribar\onnxruntime\csharp\src\Microsoft.ML.OnnxRuntime\Microsoft.ML.OnnxRuntime.csproj" />
   </ItemGroup>
 
 </Project>

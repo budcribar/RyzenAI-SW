@@ -8,6 +8,7 @@ using System.Text;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
+
 using Microsoft.ML.OnnxRuntime;
 using Microsoft.ML.OnnxRuntime.Tensors;
 
@@ -89,6 +90,8 @@ namespace ResNetCIFAR
                 try
                 {
                     sessionOptions.AppendExecutionProvider_VitisAI(options);
+                 
+
                 }
                 catch (Exception e)
                 {
@@ -387,11 +390,11 @@ namespace ResNetCIFAR
         /// <summary>
         /// Appends the VitisAI Execution Provider with the given options.
         /// </summary>
-        public static void AppendExecutionProvider_VitisAI(this SessionOptions options, Dictionary<string, string> epOptions)
-        {
-            // Note: VitisAI Execution Provider is hypothetical in this context.
-            // Replace with actual implementation based on the ONNX Runtime's VitisAI provider.
-            throw new NotImplementedException("VitisAI Execution Provider integration is not implemented.");
-        }
+        //public static void AppendExecutionProvider_VitisAI(this SessionOptions options, Dictionary<string, string> epOptions)
+        //{
+        //    // Note: VitisAI Execution Provider is hypothetical in this context.
+        //    // Replace with actual implementation based on the ONNX Runtime's VitisAI provider.
+        //    throw new NotImplementedException("VitisAI Execution Provider integration is not implemented.");
+        //}
     }
 }
